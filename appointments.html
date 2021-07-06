@@ -1,0 +1,35 @@
+{% extends "base.html" %}
+{% block title %}Appointments{% endblock %}
+{% block content %}
+<div style="margin-top: 50px; padding-top: 25px; padding-left: 50px; padding-right: 50px">
+<form action="#" method="post">
+	<table class="table table-striped">
+		<thead>
+			<tr>
+				<th style="text-align: center; vertical-align: middle; font-size: 20px" scope="col">Visitor</th>
+				<th style="text-align: center; vertical-align: middle; font-size: 20px" scope="col">Phone Number</th>
+				<th style="text-align: center; vertical-align: middle; font-size: 20px" scope="col">Prisoner</th>
+				<th style="text-align: center; vertical-align: middle; font-size: 20px" scope="col">Cell</th>
+				<th style="text-align: center; vertical-align: middle; font-size: 20px" scope="col">Relationship</th>
+				<th style="text-align: center; vertical-align: middle; font-size: 20px" scope="col">Pupose of Visit</th>
+	      
+			</tr>
+		</thead>
+	<tbody>
+		{% for x in visitor %}
+	  	
+		<tr>
+			<td style="text-align: center; vertical-align: middle;">{{x[0]}}</td>
+	    	<td style="text-align: center; vertical-align: middle;">{{x[1]}}</td>
+	    	<td style="text-align: center; vertical-align: middle;">{{x[2]}}</td>
+	    	<td style="text-align: center; vertical-align: middle;">{{x[3]}}</td>
+	    	<td style="text-align: center; vertical-align: middle;">{{x[4]}}</td>
+	    	<td style="text-align: center; vertical-align: middle;">{{x[5]}}</td>
+
+	    </tr>
+	    {% endfor %}
+	  </tbody>
+	</table>
+</form>
+</div>
+{% endblock %}

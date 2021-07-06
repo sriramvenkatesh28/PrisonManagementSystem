@@ -1,0 +1,45 @@
+{% extends "base.html" %}
+{% block title %}Visiting{% endblock %}
+{% block content %}
+    {% with messages = get_flashed_messages() %}
+        {% if messages %}
+            {% for msg in messages %}
+                <div style="margin-left: 50px;">
+                    <p style="color: black; margin-top: 100px;">{{msg}}</p>
+                </div>
+            {% endfor %}
+        {% endif %}
+    {% endwith %}
+<div style="margin-top: 60px; padding-top: 25px; padding-left: 50px; padding-right: 50px">
+	<form action="#" method="post">
+
+  		    <div class="form-group">
+    			<label style="margin-left:50px; font-size: 20px"><b>Visitor Name</b></label>
+    			<input name="v_name" style="width: 400px; margin-left:50px;" class="form-control" placeholder="Enter Visitor name">
+  		    </div>
+            <div class="form-group">
+                <label style="margin-left:50px; font-size: 20px"><b>Phone Number</b></label>
+                <input name="phone" style="width: 400px; margin-left:50px;" class="form-control" placeholder="Enter Phone Number">
+            </div>
+            <div class="form-group">
+                <label style="margin-left:50px; font-size: 20px"><b>Prisoner Name</b></label>
+                <input name="p_name" style="width: 400px; margin-left:50px;" class="form-control" placeholder="Enter Prisoner Name">
+            </div>
+            <div class="form-group">
+                <label for="cars" style="margin-left:50px; font-size: 20px"><b>Cell Number</b></label>
+                <input name="cell" style="width: 400px; margin-left:50px;" class="form-control" placeholder="Enter Cell Number">
+            </div>
+            <div class="form-group">
+                <label style="margin-left:50px; font-size: 20px"><b>Relationship With Prisoner</b></label>
+                <input name="rel" style="width: 400px; margin-left:50px;" class="form-control" placeholder="Enter Relationship">
+            </div>
+            <div class="form-group">
+                <label style="margin-left:50px; font-size: 20px"><b>Purpose of your visit</b></label>
+                <input name="purpose" style="width: 400px; margin-left:50px;" class="form-control" placeholder="Enter Purpose">
+            </div>
+  		    
+  		    <button style="margin-left:50px; font-size: 20px" type="submit" class="btn btn-primary"><b>Submit</b></button>
+            
+	    </form>
+</div>
+{% endblock %}

@@ -1,0 +1,40 @@
+{% extends "base.html" %}
+{% block title %}Add prisoner{% endblock %}
+{% block content %}
+    {% with messages = get_flashed_messages() %}
+        {% if messages %}
+            {% for msg in messages %}
+                <div style="margin-left: 50px;">
+                    <p style="color: black; margin-top: 100px;">{{msg}}</p>
+                </div>
+            {% endfor %}
+        {% endif %}
+    {% endwith %}
+<div style="margin-top: 70px; padding-top: 25px; padding-left: 50px; padding-right: 50px">
+<form action="#" method="post">
+
+  		    <div class="form-group">
+    			<label style="margin-left:50px; font-size: 20px"><b>Prisoner Name</b></label>
+    			<input name="name" style="width: 400px; margin-left:50px;" class="form-control" placeholder="Enter Prisoner name">
+  		    </div>
+            <div class="form-group">
+                <label style="margin-left:50px; font-size: 20px"><b>Native City</b></label>
+                <input name="city" style="width: 400px; margin-left:50px;" class="form-control" placeholder="Enter Native City">
+            </div>
+            <div class="form-group">
+                <label style="margin-left:50px; font-size: 20px"><b>Phone number</b></label>
+                <input name="phone" style="width: 400px; margin-left:50px;" class="form-control" placeholder="Enter Phone number">
+            </div>
+            <div class="form-group">
+                <label style="margin-left:50px; font-size: 20px;"><b>Parole</b></label>
+                <input name="parole" style="width: 400px; margin-left:50px;" class="form-control" placeholder="Enter Parole">
+            </div>
+            
+            <button style="margin-left:50px; font-size: 20px;" type="submit" class="btn btn-primary"><b>Submit</b></button>
+            
+  		    
+            
+	    </form>
+</div>
+{% endblock %}
+
